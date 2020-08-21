@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="enter_zip">Enter Zip Code</string>
+    <string name="enter_country">Enter Country Code</string>
+
+    <string name="imperial">Fahrenheit</string>
+    <string name="Default">Kelvin</string>
+    <string name="metric">Celsius</string>
+
+    <string name="units">Temp Unit</string>
+    <string name="temp_unit">Enter Temp Unit</string>
+    <string name="location">Location</string>
+    <string name="enter">Enter</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="save">Save</string>
+    <string name="country_code">Country Code</string>
+    <string name="icon">icon</string>
+    <string name="about_me">About :</string>
+    <string name="cancel">Cancel</string>
+    <string name="weeklyWeather">Week</string>
+    <string name="currentWeather">Today</string>
+    <string name="home">Home</string>
+</resources>

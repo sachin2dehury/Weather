@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/currentWeather"
+        android:id="@+id/bottomCurrentWeather"
+        android:icon="@drawable/ic_baseline_home_24"/>
+    <item android:title="@string/weeklyWeather"
+        android:id="@+id/bottomWeeklyWeather"
+        android:icon="@drawable/ic_baseline_view_week_24"/>
+    <item android:title="@string/location"
+        android:id="@+id/bottomLocation"
+        android:icon="@drawable/ic_baseline_location_on_24"/>
+</menu>

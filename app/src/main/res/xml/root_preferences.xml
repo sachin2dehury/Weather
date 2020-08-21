@@ -1,0 +1,31 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/temp_unit">
+
+        <ListPreference
+            app:entries="@array/units"
+            app:entryValues="@array/units_key"
+            app:key="unit"
+            app:title="@string/units"
+            app:useSimpleSummaryProvider="false"
+            app:summary="Enter Unit to Display temp"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/location">
+
+        <EditTextPreference
+            app:key="zip"
+            app:title="@string/zip_code"
+            app:useSimpleSummaryProvider="false"
+            app:summary="Enter Postal PinCode"/>
+
+        <EditTextPreference
+            app:key="country"
+            app:title="@string/country_code"
+            app:useSimpleSummaryProvider="false"
+            app:summary="Enter Country Code (IN for India)"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
