@@ -2,6 +2,8 @@
 *.apk
 *.ap_
 *.aab
+
+# Application key files
 *.jks
 
 # Files for the ART/Dalvik VM
