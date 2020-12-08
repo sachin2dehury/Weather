@@ -2,8 +2,6 @@ package github.sachin2dehury.weather.location
 
 import android.content.Context
 import android.widget.Toast
-import github.sachin2dehury.weather.ui.country
-import github.sachin2dehury.weather.ui.zip
 
 fun locationValidator(zipText: String, countryText: String, context: Context): Boolean {
 

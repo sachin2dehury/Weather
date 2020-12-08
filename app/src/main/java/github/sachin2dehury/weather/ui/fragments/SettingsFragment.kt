@@ -7,10 +7,11 @@ import androidx.preference.ListPreference
 import androidx.preference.PreferenceFragmentCompat
 import github.sachin2dehury.weather.R
 import github.sachin2dehury.weather.location.locationValidator
+import github.sachin2dehury.weather.others.*
+import github.sachin2dehury.weather.others.Constants.tempUnit
 import github.sachin2dehury.weather.settings.getUnit
 import github.sachin2dehury.weather.settings.loadData
 import github.sachin2dehury.weather.settings.saveData
-import github.sachin2dehury.weather.ui.*
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
@@ -30,7 +31,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         zipCode.setDefaultValue(zip)
         countryCode.setDefaultValue(country)
 
-        editUnit.setOnPreferenceChangeListener{ _, newValue->
+        editUnit.setOnPreferenceChangeListener { _, newValue ->
             tempUnit.unit = newValue.toString().toLowerCase()
             unit = getUnit()
             true
@@ -44,10 +45,12 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
     }
+
     override fun onResume() {
         super.onResume()
         loadData(requireContext())
     }
+
     override fun onPause() {
         super.onPause()
         saveData(requireContext())

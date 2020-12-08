@@ -14,6 +14,7 @@ class AboutFragment : Fragment(R.layout.fragment_about) {
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        aboutText.text = "Developed By : Sachin Dehury\nEmail : sachindehury2015@gmail.com\nVersion : ${BuildConfig.VERSION_NAME}\nBuild Date : 21.08.2020"
+        aboutText.text =
+            "Developed By : Sachin Dehury\nEmail : sachindehury2015@gmail.com\nVersion : ${BuildConfig.VERSION_NAME}\nBuild Date : 21.08.2020"
     }
 }

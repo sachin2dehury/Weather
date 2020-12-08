@@ -1,8 +1,8 @@
-package github.sachin2dehury.weather.api
+package github.sachin2dehury.weather.api.calls
 
+import github.sachin2dehury.weather.api.data.CurrentWeather
+import github.sachin2dehury.weather.api.data.WeeklyWeather
 import retrofit2.Call
-import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -23,12 +23,4 @@ interface ApiService {
         @Query("appid") apiKey: String,
         @Query("units") unit: String
     ): Call<WeeklyWeather>
-}
-
-fun createApiService(): ApiService {
-    val retrofit = Retrofit.Builder()
-        .baseUrl("http://api.openweathermap.org")
-        .addConverterFactory(MoshiConverterFactory.create())
-        .build()
-    return retrofit.create(ApiService::class.java)
 }

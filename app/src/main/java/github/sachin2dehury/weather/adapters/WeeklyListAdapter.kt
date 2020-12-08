@@ -1,4 +1,4 @@
-package github.sachin2dehury.weather.ui.helper
+package github.sachin2dehury.weather.adapters
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -8,18 +8,16 @@ import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import github.sachin2dehury.weather.R
-import github.sachin2dehury.weather.api.DailyForecast
-import github.sachin2dehury.weather.ui.dateFormat
+import github.sachin2dehury.weather.api.data.DailyForecast
+import github.sachin2dehury.weather.others.Constants.dateFormat
+import github.sachin2dehury.weather.others.Constants.unit
 import github.sachin2dehury.weather.ui.fragments.WeeklyDetailsFragment
-import github.sachin2dehury.weather.ui.unit
 import kotlinx.android.synthetic.main.list_item_layout.view.*
 import java.util.*
 
-var index: Int = 0
-
 class WeeklyListAdapter(
     private val weatherList: List<DailyForecast>,
-    val fragmentManager: FragmentManager
+    private val fragmentManager: FragmentManager
 ) :
     RecyclerView.Adapter<WeeklyListAdapter.WeeklyViewHolder>() {
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,11 +10,11 @@
         android:id="@+id/about"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/about_me"
         android:layout_marginTop="16dp"
+        android:text="@string/about_me"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/colorGrey"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,8 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
-        android:textColorLink="@color/colorAccent"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColorLink="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="@+id/about"
         app:layout_constraintStart_toStartOf="@+id/about"
         app:layout_constraintTop_toBottomOf="@+id/about"

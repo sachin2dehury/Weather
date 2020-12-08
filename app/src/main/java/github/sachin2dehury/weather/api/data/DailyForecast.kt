@@ -1,19 +1,6 @@
-package github.sachin2dehury.weather.api
+package github.sachin2dehury.weather.api.data
 
 import com.squareup.moshi.Json
-
-data class DailyWeatherDetails(
-    val main: String,
-    val description: String,
-    val icon: String
-)
-
-data class DailyTempDetails(
-    val day: Float,
-    val night: Float,
-    val min: Float,
-    val max: Float
-)
 
 data class DailyForecast(
     @field:Json(name = "dt") val date: Long,
@@ -25,8 +12,4 @@ data class DailyForecast(
     @field:Json(name = "wind_deg") val wind_deg: Int,
     @field:Json(name = "weather") val dailyWeatherDetails: List<DailyWeatherDetails>,
     @field:Json(name = "temp") val dailyTempDetails: DailyTempDetails
-)
-
-data class WeeklyWeather(
-    @field:Json(name = "daily") val weeklyForecast: List<DailyForecast>
 )

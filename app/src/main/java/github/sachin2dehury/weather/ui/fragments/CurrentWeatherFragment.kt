@@ -8,9 +8,16 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.squareup.picasso.Picasso
 import github.sachin2dehury.weather.R
-import github.sachin2dehury.weather.api.CurrentWeather
+import github.sachin2dehury.weather.api.data.CurrentWeather
+import github.sachin2dehury.weather.others.*
+import github.sachin2dehury.weather.others.Constants.allUnits
+import github.sachin2dehury.weather.others.Constants.currentForecast
+import github.sachin2dehury.weather.others.Constants.dateFormat
+import github.sachin2dehury.weather.others.Constants.loc
+import github.sachin2dehury.weather.others.Constants.pos
+import github.sachin2dehury.weather.others.Constants.timeFormat
+import github.sachin2dehury.weather.others.Constants.unit
 import github.sachin2dehury.weather.settings.saveData
-import github.sachin2dehury.weather.ui.*
 import kotlinx.android.synthetic.main.fragment_current_weather.*
 import java.util.*
 
@@ -25,7 +32,7 @@ class CurrentWeatherFragment : Fragment(R.layout.fragment_current_weather) {
             if (data == null) {
 //                context.finish()
 //                Toast.makeText(context, "Invalid Location", Toast.LENGTH_SHORT).show()
-                Log.d("Sachin","NO DATA ${this.javaClass}")
+                Log.d("Sachin", "NO DATA ${this.javaClass}")
             }
 
             val img = "http://openweathermap.org/img/wn/${data.weatherDetails[0].icon}@4x.png"

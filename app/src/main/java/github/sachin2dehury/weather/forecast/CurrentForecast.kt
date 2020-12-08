@@ -3,20 +3,23 @@ package github.sachin2dehury.weather.forecast
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import github.sachin2dehury.weather.api.CurrentWeather
-import github.sachin2dehury.weather.ui.apiKey
-import github.sachin2dehury.weather.ui.apiService
-import github.sachin2dehury.weather.ui.tempUnit
+import github.sachin2dehury.weather.api.data.CurrentWeather
+import github.sachin2dehury.weather.others.Constants.apiKey
+import github.sachin2dehury.weather.others.Constants.apiService
+import github.sachin2dehury.weather.others.Constants.tempUnit
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class CurrentForecast() {
+class CurrentForecast {
 
     private val _currentForecast = MutableLiveData<CurrentWeather>()
     val currentForecast: LiveData<CurrentWeather> = _currentForecast
 
-    fun getCurrentForecast(zip: String, country: String) {
+    fun getCurrentForecast(zip: String, country: String) = CoroutineScope(Dispatchers.IO).launch {
 
         val call = apiService.getCurrentWeather(
             "$zip,$country",

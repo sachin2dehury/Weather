@@ -2,10 +2,21 @@ package github.sachin2dehury.weather.settings
 
 import android.content.Context
 import androidx.preference.PreferenceManager
-import github.sachin2dehury.weather.api.CoOrdinates
-import github.sachin2dehury.weather.ui.*
+import github.sachin2dehury.weather.api.data.CoOrdinates
+import github.sachin2dehury.weather.others.*
+import github.sachin2dehury.weather.others.Constants.tempUnit
 
 private const val app = "github.sachin2dehury.weather"
+
+fun getUnit(): String {
+//    Log.d("Sachin","Get Unit Called ${tempUnit.unit}")
+    return when (tempUnit.unit) {
+        "metric" -> "°C"
+        "default" -> "K"
+        "imperial" -> "°F"
+        else -> "K"
+    }
+}
 
 fun saveData(context: Context) {
     PreferenceManager.getDefaultSharedPreferences(context).edit().apply {

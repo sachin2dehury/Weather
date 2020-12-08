@@ -6,9 +6,9 @@
             app:entries="@array/units"
             app:entryValues="@array/units_key"
             app:key="unit"
+            app:summary="Enter Unit to Display temp"
             app:title="@string/units"
-            app:useSimpleSummaryProvider="false"
-            app:summary="Enter Unit to Display temp"/>
+            app:useSimpleSummaryProvider="false" />
 
     </PreferenceCategory>
 
@@ -16,15 +16,15 @@
 
         <EditTextPreference
             app:key="zip"
+            app:summary="Enter Postal PinCode"
             app:title="@string/zip_code"
-            app:useSimpleSummaryProvider="false"
-            app:summary="Enter Postal PinCode"/>
+            app:useSimpleSummaryProvider="false" />
 
         <EditTextPreference
             app:key="country"
+            app:summary="Enter Country Code (IN for India)"
             app:title="@string/country_code"
-            app:useSimpleSummaryProvider="false"
-            app:summary="Enter Country Code (IN for India)"/>
+            app:useSimpleSummaryProvider="false" />
 
     </PreferenceCategory>
 
